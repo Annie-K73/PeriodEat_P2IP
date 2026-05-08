@@ -60,7 +60,7 @@ def afficher():
                     st.subheader(plat[1])
                     if plat[9] and plat[9] != "":
                         try:
-                            st.image(plat[9], use_column_width=True)
+                            st.image(plat[9], use_container_width=True)
                         except:
                             pass
                     st.write(plat[6])

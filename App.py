@@ -2,22 +2,26 @@ from Database import init_db
 from Models.Plat import Plat
 from Models.Ingredient import Ingredient
 from Models.Utilisateur import Utilisateur
+from Models.Anamnese import Anamnese
 from ImportCSV import import_aliments
 import streamlit as st
 
+############################################################################
+##  COMMANDE POUR LANCER L'APPLI (terminal) : py -m streamlit run App.py
+#############################################################################
 
 # Initialisation de la base de données
 init_db()
 
-#Chargement de tous les ingrédients
-if not Ingredient.get_tous():
-    import_aliments()
+# Chargement/synchronisation des aliments CSV à chaque lancement
+Ingredient.synchroniser_csv()
 
 # Configuration de la page
 st.set_page_config(
     page_title="PeriodEat",
     page_icon="🌸",
-    layout="wide"
+    layout="wide",
+    initial_sidebar_state="expanded"
 )
 
 # Initialisation de la session
@@ -26,9 +30,12 @@ if "connecte" not in st.session_state:
 if "utilisateur" not in st.session_state:
     st.session_state.utilisateur = None
 
+if st.session_state.connecte:
+    Anamnese.calculer_phase(st.session_state.utilisateur[0])
+
 # Navigation
 if not st.session_state.connecte:
-    from Pages.Connexion import afficher
+    from Interface.Connexion import afficher
     afficher()
 else:
     st.sidebar.title("🌸 PeriodEat")
@@ -38,6 +45,7 @@ else:
     page = st.sidebar.radio("Navigation", [
         "🏠 Accueil",
         "🍽️ Recettes",
+        "🌸 Ma recette",
         "💬 Forum",
         "👤 Mon profil",
         "⚙️ Admin"
@@ -50,17 +58,20 @@ else:
         st.rerun()
 
     if page == "🏠 Accueil":
-        from Pages.Accueil import afficher
+        from Interface.Accueil import afficher
         afficher()
     elif page == "🍽️ Recettes":
-        from Pages.Recettes import afficher
+        from Interface.Recettes import afficher
+        afficher()
+    elif page == "🌸 Ma recette":
+        from Interface.MaRecette import afficher
         afficher()
     elif page == "💬 Forum":
-        from Pages.Forum import afficher
+        from Interface.Forum import afficher
         afficher()
     elif page == "👤 Mon profil":
-        from Pages.Profil import afficher
+        from Interface.Profil import afficher
         afficher()
     elif page == "⚙️ Admin":
-        from Pages.Admin import afficher
+        from Interface.Admin import afficher
         afficher()

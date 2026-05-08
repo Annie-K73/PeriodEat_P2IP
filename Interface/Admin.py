@@ -1,4 +1,5 @@
 import streamlit as st
+import os
 from Models.Plat import Plat
 from Models.Ingredient import Ingredient
 from Models.Utilisateur import Utilisateur
@@ -28,7 +29,14 @@ def afficher():
                 options=tous_ingredients,
                 format_func=lambda i: i[1]  # affiche le nom de l'ingrédient
             )
-            
+
+            images_disponibles = os.listdir("Images")
+            photo_choisie = st.selectbox(
+                "Photo du plat",
+                options=images_disponibles,
+                format_func=lambda x: x  # affiche le nom du fichier
+            )
+                
             nb_personnes = st.number_input("Nombre de personnes", min_value=1, value=2)
             difficulte = st.selectbox("Difficulté", ["facile", "moyen", "difficile"])
 
@@ -50,8 +58,10 @@ def afficher():
                         scoreLuteale=score_l,
                         description=description,
                         nbPersonne=nb_personnes,
-                        difficulte=difficulte
-                    )
+                        difficulte=difficulte,
+                        photoUrl=f"Images/{photo_choisie}"
+                        )
+                    
                     p.sauvegarder()
                     
                     # Récupération de l'id du plat qu'on vient de créer
@@ -70,7 +80,7 @@ def afficher():
         plats = Plat.get_tous()
         if plats:
             for plat in plats:
-                st.write(f"**{plat[1]}** — Difficulté : {plat[8]} \n\tM : {plat[2]} F : {plat[3]} O : {plat[4]} L : {plat[5]}")
+                st.write(f"**{plat[1]}** | Difficulté : {plat[8]} | Menstruel : {plat[2]} | Folliculaire : {plat[3]} | Ovulatoire : {plat[4]} | Lutéale : {plat[5]}")
         else:
             st.info("Aucun plat dans la base.")
 

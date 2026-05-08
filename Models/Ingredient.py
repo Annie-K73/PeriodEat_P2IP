@@ -48,3 +48,46 @@ class Ingredient:
         conn.close()
         return rows
     
+    @staticmethod
+    def synchroniser_csv():
+        """Synchronise les ingrédients depuis le CSV sans vider toute la BDD."""
+        df = pd.read_csv("aliments_cycle.csv")
+
+        conn = get_connection()
+        cur = conn.cursor()
+
+        for _, row in df.iterrows():
+            nom = row['Aliment']
+            estSaisonnier = row['Saison FR'] != "Toute l'année"
+            saison = row['Saison FR']
+            scoreMenstruelle = int(row['Menstruation'])
+            scoreFolliculaire = int(row['Folliculaire'])
+            scoreOvulation = int(row['Ovulatoire'])
+            scoreLuteale = int(row['Lutéale'])
+
+            # si l'ingrédient existe déjà, on le met à jour, sinon on l'insère
+            cur.execute("SELECT id_ingredient FROM Ingredient WHERE nom = ?", (nom,))
+            existant = cur.fetchone()
+
+            if existant:
+                cur.execute("""
+                    UPDATE Ingredient
+                    SET estSaisonnier = ?, saison = ?, scoreMenstruelle = ?,
+                        scoreFolliculaire = ?, scoreOvulation = ?, scoreLuteale = ?
+                    WHERE nom = ?
+                """, (estSaisonnier, saison, scoreMenstruelle,
+                    scoreFolliculaire, scoreOvulation, scoreLuteale, nom))
+                print(f"✓ {nom} mis à jour")
+            else:
+                cur.execute("""
+                    INSERT INTO Ingredient
+                    (nom, estSaisonnier, saison, scoreMenstruelle, scoreFolliculaire,
+                    scoreOvulation, scoreLuteale)
+                    VALUES (?, ?, ?, ?, ?, ?, ?)
+                """, (nom, estSaisonnier, saison, scoreMenstruelle,
+                    scoreFolliculaire, scoreOvulation, scoreLuteale))
+                print(f"✓ {nom} ajouté")
+
+        conn.commit()
+        conn.close()
+    

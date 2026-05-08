@@ -72,7 +72,7 @@ def init_db():
             note INT NOT NULL,
             datePublication DATE NOT NULL,
             id_forum INT NOT NULL,
-            id_plat INT NOT NULL,
+            id_plat INT,
             Id_utilisateur INT NOT NULL,
             FOREIGN KEY (id_forum) REFERENCES Forum(id_forum),
             FOREIGN KEY (id_plat) REFERENCES Plat(id_plat),

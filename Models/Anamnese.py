@@ -1,4 +1,5 @@
 from Database import get_connection
+from datetime import date, datetime
 
 class Anamnese:
     def __init__(self, id_utilisateur, dateDebutCycle=None, dureeCycle=28, phaseActuelle=None, symptomes=None):
@@ -43,13 +44,44 @@ class Anamnese:
         conn.close()
 
     @staticmethod
-    def mettre_a_jour(id_utilisateur, dateDebutCycle, dureeCycle, phaseActuelle, symptomes):
+    def mettre_a_jour(id_utilisateur, dateDebutCycle, dureeCycle, symptomes):
         conn = get_connection()
         cur = conn.cursor()
         cur.execute("""
             UPDATE Anamnese
-            SET dateDebutCycle = ?, dureeCycle = ?, phaseActuelle = ?, symptomes = ?
+            SET dateDebutCycle = ?, dureeCycle = ?, symptomes = ?
             WHERE Id_utilisateur = ?
-        """, (dateDebutCycle, dureeCycle, phaseActuelle, symptomes, id_utilisateur))
+        """, (dateDebutCycle, dureeCycle, symptomes, id_utilisateur))
         conn.commit()
         conn.close()
+
+    @staticmethod
+    def calculer_phase(id_utilisateur):
+        """Calcule et met à jour la phase actuelle d'un utilisateur selon la date du jour."""
+        anamnese = Anamnese.get_par_utilisateur(id_utilisateur)
+        if not anamnese:
+            return None
+
+        try :
+            date_debut = datetime.strptime(anamnese[2], "%Y-%m-%d").date()
+            duree_cycle = anamnese[3]
+
+            # Nombre de jours depuis le début du cycle
+            jours_ecoules = (date.today() - date_debut).days % duree_cycle
+
+            # Détermination de la phase
+            if jours_ecoules <= 5:
+                phase = "menstruelle"
+            elif jours_ecoules <= 13:
+                phase = "folliculaire"
+            elif jours_ecoules <= 15:
+                phase = "ovulation"
+            else:
+                phase = "luteale"
+            print("Phase calculée : ",phase)
+            # Mise à jour en base
+            Anamnese.mettre_a_jour_phase(id_utilisateur, phase)
+            return phase
+        except:
+            print("Erreur dans calculer_phase")
+            return None

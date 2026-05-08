@@ -36,19 +36,26 @@ def afficher():
             st.divider()
 
             # Avis
-            st.subheader("Avis des utilisatrices")
+            st.subheader("⭐ Avis des utilisatrices")
             avis_liste = Avis.get_par_forum(id_forum)
             if avis_liste:
                 for av in avis_liste:
-                    st.write(f"⭐ {av[2]}/5 — {av[1]}")
+                    if av[5] is None:  # message libre (pas de plat)
+                        st.write(f"💬 {av[1]}")
+                    else:
+                        st.write(f"⭐ {av[2]}/5 — {av[1]}")
                     st.caption(f"Publié le {av[3]}")
             else:
-                st.info("Aucun avis pour le moment.")
+                st.info("Aucun message pour le moment.")
+            # Poster un message
+        st.subheader("Poster un message")
+        type_message = st.radio(
+            "Type de message",
+            ["💬 Message libre", "⭐ Avis sur un plat"],
+            key=f"type_{id_forum}"
+        )
 
-            st.divider()
-
-            # Poster un avis
-            st.subheader("Poster un avis")
+        if type_message == "⭐ Avis sur un plat":
             plats = Plat.get_tous()
             if plats:
                 plat_choisi = st.selectbox(
@@ -74,3 +81,21 @@ def afficher():
                         st.rerun()
                     else:
                         st.error("Veuillez écrire un commentaire.")
+
+        else:  # Message libre
+            commentaire_libre = st.text_area("Votre message", key=f"libre_{id_forum}")
+
+            if st.button("Publier", key=f"publier_libre_{id_forum}"):
+                if commentaire_libre:
+                    av = Avis(
+                        commentaire=commentaire_libre,
+                        note=0,  # pas de note pour un message libre
+                        id_forum=id_forum,
+                        id_plat=None,  # pas de plat associé
+                        id_utilisateur=id_utilisateur
+                    )
+                    av.sauvegarder()
+                    st.success("Message publié !")
+                    st.rerun()
+                else:
+                    st.error("Veuillez écrire un message.")
