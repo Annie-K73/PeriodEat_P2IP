@@ -10,6 +10,10 @@ import streamlit as st
 ##  COMMANDE POUR LANCER L'APPLI (terminal) : py -m streamlit run App.py
 #############################################################################
 
+####################################################
+## COMPTE DE TEST : lea@test.com et mdp : 1234
+####################################################
+
 # Initialisation de la base de données
 init_db()
 
