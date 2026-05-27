@@ -3,6 +3,7 @@ from Models.Forum import Forum
 from Models.Article import Article
 from Models.Avis import Avis
 from Models.Plat import Plat
+from Models.Message import Message
 
 def afficher():
     st.title("💬 Forum")
@@ -36,7 +37,7 @@ def afficher():
             st.divider()
 
             # Avis
-            st.subheader("⭐ Avis des utilisatrices")
+            st.subheader("Avis des utilisatrices")
             avis_liste = Avis.get_par_forum(id_forum)
             if avis_liste:
                 for av in avis_liste:
@@ -46,56 +47,70 @@ def afficher():
                         st.write(f"⭐ {av[2]}/5 — {av[1]}")
                     st.caption(f"Publié le {av[3]}")
             else:
+                st.info("Aucun avis pour le moment.")
+
+            st.divider()
+
+            # Affichage des messages libres
+            #print("ID Forum : ",id_forum) 
+            st.subheader("Messages de la communauté")
+            messages = Message.get_par_forum(id_forum)
+            if messages:
+                for msg in messages:
+                    st.write(f"💬 {msg[1]}")
+                    st.caption(f"Publié le {msg[2]}")
+            else:
                 st.info("Aucun message pour le moment.")
+
+            st.divider()
+        
             # Poster un message
-        st.subheader("Poster un message")
-        type_message = st.radio(
-            "Type de message",
-            ["💬 Message libre", "⭐ Avis sur un plat"],
-            key=f"type_{id_forum}"
-        )
+            st.subheader("Poster un message")
+            type_message = st.radio(
+                "Type de message",
+                ["💬 Message libre", "⭐ Avis sur un plat"],
+                key=f"type_{id_forum}"
+            )
 
-        if type_message == "⭐ Avis sur un plat":
-            plats = Plat.get_tous()
-            if plats:
-                plat_choisi = st.selectbox(
-                    "Sur quel plat ?",
-                    options=plats,
-                    format_func=lambda p: p[1],
-                    key=f"plat_{id_forum}"
-                )
-                note = st.slider("Note", 1, 5, 3, key=f"note_{id_forum}")
-                commentaire = st.text_area("Commentaire", key=f"commentaire_{id_forum}")
+            if type_message == "⭐ Avis sur un plat":
+                plats = Plat.get_tous()
+                if plats:
+                    plat_choisi = st.selectbox(
+                        "Sur quel plat ?",
+                        options=plats,
+                        format_func=lambda p: p[1],
+                        key=f"plat_{id_forum}"
+                    )
+                    note = st.slider("Note", 1, 5, 3, key=f"note_{id_forum}")
+                    commentaire = st.text_area("Commentaire", key=f"commentaire_{id_forum}")
 
-                if st.button("Publier", key=f"publier_{id_forum}"):
-                    if commentaire:
-                        av = Avis(
-                            commentaire=commentaire,
-                            note=note,
+                    if st.button("Publier", key=f"publier_{id_forum}"):
+                        if commentaire:
+                            av = Avis(
+                                commentaire=commentaire,
+                                note=note,
+                                id_forum=id_forum,
+                                id_plat=plat_choisi[0],
+                                id_utilisateur=id_utilisateur
+                            )
+                            av.sauvegarder()
+                            st.success("Avis publié !")
+                            st.rerun()
+                        else:
+                            st.error("Veuillez écrire un commentaire.")
+
+            else:  # Message libre
+
+                commentaire_libre = st.text_area("Votre message", key=f"libre_{id_forum}")
+                if st.button("Publier", key=f"publier_libre_{id_forum}"):
+                    if commentaire_libre:
+                        msg = Message(
+                            contenu=commentaire_libre,
                             id_forum=id_forum,
-                            id_plat=plat_choisi[0],
                             id_utilisateur=id_utilisateur
                         )
-                        av.sauvegarder()
-                        st.success("Avis publié !")
+                        msg.sauvegarder()
+                        st.success("Message publié !")
                         st.rerun()
                     else:
-                        st.error("Veuillez écrire un commentaire.")
-
-        else:  # Message libre
-            commentaire_libre = st.text_area("Votre message", key=f"libre_{id_forum}")
-
-            if st.button("Publier", key=f"publier_libre_{id_forum}"):
-                if commentaire_libre:
-                    av = Avis(
-                        commentaire=commentaire_libre,
-                        note=0,  # pas de note pour un message libre
-                        id_forum=id_forum,
-                        id_plat=None,  # pas de plat associé
-                        id_utilisateur=id_utilisateur
-                    )
-                    av.sauvegarder()
-                    st.success("Message publié !")
-                    st.rerun()
-                else:
-                    st.error("Veuillez écrire un message.")
+                        st.error("Veuillez écrire un message.") 

@@ -1,4 +1,7 @@
 from Database import get_connection
+from Models.Ingredient import Ingredient
+from Outils.Utils import ingredient_de_saison
+
 
 class Plat:
     def __init__(self, nom, scoreMenstruelle, scoreFolliculaire, scoreOvulation, scoreLuteale, description, nbPersonne, difficulte, photoUrl=None):
@@ -44,6 +47,33 @@ class Plat:
         rows = cur.fetchall()
         conn.close()
         return rows
+    
+    @staticmethod
+    def get_plats_de_saison():
+        """Retourne les plats dont tous les ingrédients sont de saison."""
+
+        conn = get_connection()
+        cur = conn.cursor()
+        cur.execute("""
+            SELECT DISTINCT p.* FROM Plat p
+            JOIN Composer c ON p.id_plat = c.id_plat
+            JOIN Ingredient i ON c.id_ingredient = i.id_ingredient
+        """)
+        plats_avec_ingredients = cur.fetchall()
+        conn.close()
+
+        # On récupère les plats dont tous les ingrédients sont de saison
+        plats_de_saison = []
+        plats_vus = set()
+
+        tous_plats = Plat.get_tous()
+        for plat in tous_plats:
+            ingredients = Ingredient.get_par_plat(plat[0])
+            if all(ingredient_de_saison(i[3]) for i in ingredients):
+                plats_de_saison.append(plat)
+
+        return plats_de_saison
+
 
     @staticmethod
     def get_tous():
@@ -63,6 +93,7 @@ class Plat:
         row = cur.fetchone()
         conn.close()
         return row
+    
     
     @staticmethod
     def calculer_scores(ingredients):

@@ -112,6 +112,26 @@ def init_db():
             FOREIGN KEY (Id_utilisateur) REFERENCES Utilisateur(Id_utilisateur),
             FOREIGN KEY (id_forum) REFERENCES Forum(id_forum)
         );
+                      
+        CREATE TABLE IF NOT EXISTS Message (
+            id_message INTEGER PRIMARY KEY AUTOINCREMENT,
+            contenu VARCHAR(250) NOT NULL,
+            datePublication DATE NOT NULL,
+            id_forum INT NOT NULL,
+            Id_utilisateur INT NOT NULL,
+            FOREIGN KEY (id_forum) REFERENCES Forum(id_forum),
+            FOREIGN KEY (Id_utilisateur) REFERENCES Utilisateur(Id_utilisateur)
+                ON DELETE CASCADE
+        );
+                      
+        CREATE TABLE IF NOT EXISTS Vendre(
+            id_utilisateur INT NOT NULL,
+            id_ingredient INT NOT NULL,
+            PRIMARY KEY(id_utilisateur,id_ingredient),
+            FOREIGN KEY (id_utilisateur) REFERENCES Utilisateur(id_utilisateur) ON DELETE CASCADE,
+            FOREIGN KEY (id_ingredient) REFERENCES Ingredient (id_ingredient)
+        );
     """)
     conn.commit()
     conn.close()
+

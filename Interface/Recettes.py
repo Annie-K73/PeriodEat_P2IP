@@ -17,17 +17,35 @@ def afficher():
             "Toutes", "facile", "moyen", "difficile"
         ])
 
+    saison_filtre = st.checkbox("Uniquement les plats de saison")
+
     st.divider()
 
     # Récupération des plats
-    if phase_filtre == "Toutes":
+    # Filtrage saisonnié
+    if(saison_filtre):
+        plats = Plat.get_plats_de_saison()
+    else :
         plats = Plat.get_tous()
-    else:
-        plats = Plat.get_par_phase(phase_filtre)
+
+    # Filtrage par phase
+    if (phase_filtre != "Toutes"):
+
+        colonnes = {
+            "menstruelle": 2,
+            "folliculaire": 3,
+            "ovulation": 4,
+            "luteale": 5
+        }
+
+        index_score = colonnes.get(phase_filtre)
+
+        plats.sort(key=lambda p: p[index_score], reverse=True)
 
     # Filtrage par difficulté
     if difficulte_filtre != "Toutes":
         plats = [p for p in plats if p[8] == difficulte_filtre]
+
 
     if not plats:
         st.info("Aucune recette trouvée.")

@@ -39,3 +39,4 @@ class Avis:
         rows = cur.fetchall()
         conn.close()
         return rows
+    
