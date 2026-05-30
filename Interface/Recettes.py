@@ -2,6 +2,8 @@ import streamlit as st
 from Models.Plat import Plat
 from Models.Ingredient import Ingredient
 from Models.Avis import Avis
+from Models.Vendre import Vendre
+from Models.Utilisateur import Utilisateur
 
 def afficher():
     st.title("🍽️ Recettes")
@@ -72,8 +74,23 @@ def afficher():
             # Ingrédients
             ingredients = Ingredient.get_par_plat(plat[0])
             if ingredients:
-                st.write("**Ingrédients :**")
-                st.write(", ".join([i[1] for i in ingredients]))
+                noms = ", ".join([i[1] for i in ingredients])
+                st.write(f"**Ingrédients :** {noms}")
+                
+                with st.popover("Voir les partenaires"):
+                    ingredient_choisi = st.selectbox(
+                        "Choisir un ingrédient",
+                        options=ingredients,
+                        format_func=lambda i: i[1],
+                        key=f"select_vendeur_{plat[0]}"
+                    )
+                    vendeurs = Vendre.get_vendeurs_par_ingredient(ingredient_choisi[0])
+                    if vendeurs:
+                        for vendeur in vendeurs:
+                            utilisateur = Utilisateur.get_par_id(vendeur[0])
+                            st.write(f"• {utilisateur[7]}")
+                    else:
+                        st.write("Aucun partenaire pour cet ingrédient.")
 
             # Avis
             avis = Avis.get_par_plat(plat[0])

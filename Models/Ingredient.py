@@ -49,6 +49,15 @@ class Ingredient:
         return rows
     
     @staticmethod
+    def get_par_id_ingredient(id_ingredient):
+        conn = get_connection()
+        cur = conn.cursor()
+        cur.execute("""SELECT * FROM Ingredient WHERE id_ingredient = ?""",(id_ingredient,))
+        rows = cur.fetchone()
+        conn.close()
+        return rows
+    
+    @staticmethod
     def synchroniser_csv():
         """Synchronise les ingrédients depuis le CSV sans vider toute la BDD."""
         df = pd.read_csv("aliments_cycle.csv")
