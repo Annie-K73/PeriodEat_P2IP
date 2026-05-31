@@ -1,0 +1,160 @@
+Aliment,Catégorie,Saison FR,Intérêt,Type,Menstruation,Folliculaire,Ovulatoire,Lutéale,Phase à éviter,Pourquoi éviter
+Artichaut,Légumes,Mars-Juin,Foie + détox,Bénéfique,7,9,8,9,Aucune,Bien toléré
+Asperge,Légumes,Avr-Juin,Folates + diurétique,Bénéfique,8,10,8,6,Lutéale,Effet diurétique
+Céleri,Légumes,Toute l'année,Anti-inflammatoire,Bénéfique,7,8,7,8,Aucune,Bien toléré
+Concombre,Légumes,Juin-Sept,Hydratation + fraîcheur,Bénéfique,6,7,8,7,Aucune,Bien toléré
+Poivron rouge,Légumes,Juil-Sept,Vitamine C forte,Bénéfique,8,9,9,7,Aucune,Bien toléré
+Fenouil,Légumes,Sept-Fév,Équilibre hormonal,Bénéfique,7,8,7,9,Aucune,Bien toléré
+Chou frisé (kale),Légumes,Oct-Mars,Fer + calcium végétal,Bénéfique,9,9,8,9,Aucune,Bien toléré
+Avocat,Légumes,Déc-Avr,Graisses saines + folates,Bénéfique,8,9,8,9,Aucune,Bien toléré
+Ail,Légumes,Toute l'année,Antibactérien + circulation,Bénéfique,7,8,7,8,Menstruation,Peut irriter intestins
+Oignon,Légumes,Toute l'année,Quercétine anti-inflammatoire,Bénéfique,7,8,7,8,Aucune,Bien toléré
+Poireau,Légumes,Nov-Mars,Prébiotique + folates,Bénéfique,7,8,7,8,Aucune,Bien toléré
+Aubergine,Légumes,Juil-Sept,Antioxydants + fibres,Bénéfique,6,7,8,7,Aucune,Bien toléré
+Butternut,Légumes,Sept-Jan,Bêtacarotène + fibres,Bénéfique,7,5,5,9,Folliculaire/Ovulatoire,Glucides élevés
+Radis,Légumes,Mars-Juin,Détox foie,Bénéfique,7,8,8,7,Aucune,Bien toléré
+Navet,Légumes,Oct-Mars,Vitamine C + fibres,Bénéfique,6,7,6,7,Aucune,Bien toléré
+Mâche,Légumes,Oct-Avr,Oméga-3 + fer végétal,Bénéfique,9,8,7,7,Aucune,Bien toléré
+Cresson,Légumes,Toute l'année,Calcium + fer + iode,Bénéfique,9,8,7,7,Aucune,Bien toléré
+Champignons,Légumes,Sept-Nov,Vitamine D + zinc,Bénéfique,8,8,7,8,Aucune,Bien toléré
+Betterave,Légumes,Sept-Mars,Reconstitution sanguine,Bénéfique,9,7,7,4,Lutéale,Peut augmenter la glycémie
+Brocoli,Légumes,Oct-Avr,Détox œstrogènes,Bénéfique,8,9,8,8,Aucune,Bien toléré
+Chou rouge,Légumes,Oct-Mars,Antioxydants,Bénéfique,8,8,9,9,Aucune,Bien toléré
+Carotte,Légumes,Toute l'année,Bêtacarotène,Bénéfique,7,8,7,8,Aucune,Bien toléré
+Patate douce,Légumes,Oct-Mars,Glycémie stable,Bénéfique,8,4,5,10,Folliculaire/Ovulatoire,Trop riche en glucides
+Courges,Légumes,Sept-Fév,Fibres et magnésium,Bénéfique,7,4,5,9,Folliculaire/Ovulatoire,Plus lourdes à digérer
+Lentilles,Légumineuses,Toute l'année,Fer végétal,Bénéfique,10,8,8,9,Aucune,Bonne digestibilité
+Pois chiches,Légumineuses,Toute l'année,Folates + protéines,Bénéfique,8,8,5,8,Ovulatoire,Peut causer gaz
+Avoine,Céréales,Toute l'année,Glucides lents,Bénéfique,8,8,5,9,Ovulatoire,Charge énergétique
+Graines de lin,Oléagineux & graines,Toute l'année,Lignanes hormonales,Bénéfique,8,8,10,4,Menstruation,Effet laxatif
+Graines de courge,Oléagineux & graines,Sept-Déc,Magnésium,Bénéfique,9,8,5,8,Ovulatoire,Légère surcharge lipidique
+Amandes,Oléagineux & graines,Sept-Oct,Vitamine E,Bénéfique,8,9,8,8,Aucune,Bien toléré
+Orange,Fruits,Nov-Mars,Vitamine C,Bénéfique,9,8,7,4,Lutéale,Acidité irritante
+Kiwi,Fruits,Nov-Mars,Vitamine C forte,Bénéfique,9,8,7,4,Lutéale,Acidité irritante
+Fraises,Fruits,Avr-Juin,Antioxydants,Bénéfique,7,9,8,5,Lutéale,Pic glycémique
+Tomate,Fruits,Juin-Sept,Lycopène,Bénéfique,6,8,9,5,Menstruation,Acidité digestive
+Courgette,Légumes,Juin-Sept,Hydratation,Bénéfique,6,7,8,7,Aucune,Bien toléré
+Raisin noir,Fruits,Sept-Oct,Resvératrol,Bénéfique,6,7,8,5,Menstruation,Fibres irritantes
+Café,Boissons,Toute l'année,Diminue absorption du fer,Néfaste,2,3,3,2,Menstruation,Bloque l'absorption du fer
+Sucre raffiné,À éviter,Toute l'année,Inflammation + SPM,Néfaste,1,2,2,1,Lutéale,Amplifie SPM
+Alcool,À éviter,Toute l'année,Perturbe foie + hormones,Néfaste,1,2,1,1,Toutes,Perturbe hormones
+Saumon,Protéines animales,Toute l'année,Oméga-3 + vitamine D,Bénéfique,9,9,9,9,Aucune,Bien toléré
+Sardines,Protéines animales,Toute l'année,Oméga-3 + calcium + fer,Bénéfique,10,8,8,8,Aucune,Bien toléré
+Maquereau,Protéines animales,Toute l'année,Oméga-3 anti-inflammatoire,Bénéfique,9,8,8,8,Aucune,Bien toléré
+Thon (modéré),Protéines animales,Toute l'année,Protéines + sélénium,Bénéfique,8,8,8,7,Lutéale,Mercure en excès
+Poulet,Protéines animales,Toute l'année,Protéines légères,Bénéfique,7,8,8,7,Aucune,Bien toléré
+Dinde,Protéines animales,Toute l'année,Tryptophane + protéines,Bénéfique,7,7,8,9,Aucune,Bien toléré
+Œufs,Protéines animales,Toute l'année,Cholestérol utile + B12,Bénéfique,8,9,8,8,Aucune,Bien toléré
+Bœuf maigre,Protéines animales,Toute l'année,Fer héminique + zinc,Bénéfique,10,7,6,6,Folliculaire/Ovulatoire,Pro-inflammatoire
+Foie de poulet,Protéines animales,Toute l'année,Fer héminique + B12 élevé,Bénéfique,10,7,6,6,Folliculaire/Ovulatoire,Très dense en fer
+Moules,Protéines animales,Sept-Avr,Fer + zinc + B12,Bénéfique,10,8,7,7,Aucune,Bien toléré
+Crevettes,Protéines animales,Toute l'année,Sélénium + iode,Bénéfique,7,8,8,7,Aucune,Bien toléré
+Yaourt nature,Protéines animales,Toute l'année,Probiotiques + calcium,Bénéfique,7,8,7,8,Aucune,Bien toléré
+Kéfir,Produits laitiers & alternatives,Toute l'année,Probiotiques puissants,Bénéfique,7,9,7,8,Aucune,Bien toléré
+Fromage blanc,Produits laitiers & alternatives,Toute l'année,Protéines légères + calcium,Bénéfique,7,8,7,8,Aucune,Bien toléré
+Lait de coco,Produits laitiers & alternatives,Nov-Fév,Graisses saturées + confort,Bénéfique,7,5,5,9,Folliculaire/Ovulatoire,Riche en lipides
+Lait d'amande,Produits laitiers & alternatives,Toute l'année,Calcium végétal + légèreté,Bénéfique,6,7,7,7,Aucune,Bien toléré
+Fromage (modéré),Produits laitiers & alternatives,Toute l'année,Calcium + protéines,Neutre,5,6,5,6,Menstruation,Pro-inflammatoire
+Noix,Produits laitiers & alternatives,Sept-Nov,Oméga-3 + mélatonine,Bénéfique,8,8,8,8,Aucune,Bien toléré
+Noix de cajou,Oléagineux & graines,Sep-Nov,Magnésium + zinc,Bénéfique,8,8,8,9,Aucune,Bien toléré
+Graines de chia,Oléagineux & graines,Toute l'année,Oméga-3 + calcium végétal,Bénéfique,8,9,8,8,Aucune,Bien toléré
+Graines de sésame,Oléagineux & graines,Toute l'année,Calcium + zinc + fer,Bénéfique,9,8,7,8,Aucune,Bien toléré
+Graines de tournesol,Oléagineux & graines,Juil-Sept,Vitamine E + magnésium,Bénéfique,8,9,8,8,Aucune,Bien toléré
+Noisettes,Oléagineux & graines,Sept-Oct,Vitamine E + magnésium,Bénéfique,8,8,7,8,Aucune,Bien toléré
+Beurre d'amande,Oléagineux & graines,Toute l'année,Magnésium + protéines,Bénéfique,7,8,7,9,Aucune,Bien toléré
+Tahini,Oléagineux & graines,Toute l'année,Calcium + acides aminés,Bénéfique,8,8,7,8,Aucune,Bien toléré
+Curcuma,Oléagineux & graines,Toute l'année,Anti-inflammatoire puissant,Bénéfique,10,8,8,9,Aucune,Bien toléré
+Gingembre,Épices,Toute l'année,Anti-nausée + circulation,Bénéfique,9,8,8,8,Aucune,Bien toléré
+Cannelle,Épices,Toute l'année,Glycémie + antidouleur,Bénéfique,9,7,7,8,Folliculaire,Peut stimuler menstruation
+Cumin,Épices,Toute l'année,Digestion + fer,Bénéfique,8,8,7,8,Aucune,Bien toléré
+Tisane de framboisier,Épices,Toute l'année,Tonique utérin,Bénéfique,9,7,7,7,Ovulatoire/Folliculaire,Trop stimulant utérus
+Tisane de gingembre,Boissons,Toute l'année,Anti-nausée + douleurs,Bénéfique,9,8,8,8,Aucune,Bien toléré
+Eau de coco,Boissons,Nov-Fév,Électrolytes + hydratation,Bénéfique,8,8,8,8,Aucune,Bien toléré
+Thé vert (modéré),Boissons,Toute l'année,Antioxydants,Neutre,5,7,7,6,Menstruation,Bloque légèrement le fer
+Kombucha,Boissons,Toute l'année,Probiotiques + détox,Bénéfique,6,8,7,7,Menstruation,Légèrement acide
+Épinards,Légumes,Toute l'année,Fer + folates + magnésium,Bénéfique,10,9,8,8,Aucune,Bien toléré
+Blette,Légumes,Mai-Oct,Magnésium + fer + vitamine K,Bénéfique,9,8,7,8,Aucune,Bien toléré
+Roquette,Légumes,Toute l'année,Folates + vitamine K,Bénéfique,8,8,7,7,Aucune,Bien toléré
+Chou-fleur,Légumes,Oct-Avr,Détox œstrogènes + fibres,Bénéfique,7,9,8,7,Aucune,Bien toléré
+Chou de Bruxelles,Légumes,Oct-Fév,Détox + vitamine C,Bénéfique,7,9,8,7,Aucune,Bien toléré
+Endive,Légumes,Nov-Avr,Détox foie + fibres,Bénéfique,7,8,7,8,Aucune,Bien toléré
+Salade verte,Légumes,Avr-Oct,Folates + hydratation,Bénéfique,7,8,8,7,Aucune,Bien toléré
+Persil,Légumes,Toute l'année,Fer + vitamine C + diurétique,Bénéfique,8,8,7,7,Aucune,Bien toléré
+Patate (pomme de terre),Légumes,Toute l'année,Glucides + potassium,Neutre,6,6,6,8,Folliculaire,Index glycémique élevé
+Topinambour,Légumes,Oct-Mars,Prébiotique + fer,Bénéfique,8,8,7,8,Aucune,Peut causer gaz
+Panais,Légumes,Oct-Mars,Fibres + potassium,Bénéfique,7,7,7,8,Aucune,Bien toléré
+Betterave crue,Légumes,Sept-Mars,Fer + nitrates + folates,Bénéfique,9,8,7,5,Lutéale,Glycémie
+Haricots rouges,Légumineuses,Toute l'année,Fer + protéines végétales,Bénéfique,9,8,7,8,Aucune,Bonne tolérance
+Haricots blancs,Légumineuses,Toute l'année,Magnésium + fibres,Bénéfique,8,8,7,8,Aucune,Peut causer gaz
+Fèves,Légumineuses,Mai-Juin,Folates + fer,Bénéfique,8,9,8,7,Aucune,Bien toléré
+Edamame,Légumineuses,Juin-Sep,Isoflavones + protéines,Bénéfique,7,9,8,7,Lutéale,Phytoœstrogènes
+Tofu,Légumineuses,Toute l'année,Protéines + isoflavones,Bénéfique,7,9,8,7,Lutéale,Phytoœstrogènes en excès
+Tempeh,Légumineuses,Toute l'année,Protéines + probiotiques,Bénéfique,7,9,8,8,Aucune,Bien toléré
+Quinoa,Céréales,Avr-Mai,Protéines complètes + fer,Bénéfique,9,8,8,9,Aucune,Bien toléré
+Riz complet,Céréales,Toute l'année,Glucides lents + magnésium,Bénéfique,8,7,7,9,Aucune,Bien toléré
+Sarrasin,Céréales,Toute l'année,Magnésium + sans gluten,Bénéfique,9,8,7,9,Aucune,Bien toléré
+Millet,Céréales,Toute l'année,Fer + magnésium,Bénéfique,8,8,7,8,Aucune,Bien toléré
+Pain complet,Céréales,Toute l'année,Fibres + B vitamines,Bénéfique,7,7,7,8,Aucune,Bien toléré
+Pain blanc,Céréales,Toute l'année,Glucides rapides,Neutre,4,5,5,5,Lutéale,Pic glycémique
+Pâtes complètes,Céréales,Toute l'année,Glucides lents + fibres,Bénéfique,7,7,7,8,Aucune,Bien toléré
+Banane,Fruits,Toute l'année,Potassium + B6 + tryptophane,Bénéfique,8,7,7,9,Aucune,Bien toléré
+Pomme,Fruits,Sept-Mars,Fibres + quercétine,Bénéfique,7,8,7,7,Aucune,Bien toléré
+Poire,Fruits,Sept-Mars,Fibres + hydratation,Bénéfique,7,7,7,7,Aucune,Bien toléré
+Myrtille,Fruits,Juin-Sept,Antioxydants + vitamine C,Bénéfique,8,9,8,7,Aucune,Bien toléré
+Framboise,Fruits,Juin-Sept,Antioxydants + fer,Bénéfique,8,9,8,7,Aucune,Bien toléré
+Mûre,Fruits,Juil-Sept,Antioxydants + fibres,Bénéfique,7,8,8,7,Aucune,Bien toléré
+Cerise,Fruits,Mai-Juil,Mélatonine + antioxydants,Bénéfique,8,8,7,9,Aucune,Bien toléré
+Grenade,Fruits,Oct-Jan,Antioxydants + fer,Bénéfique,9,8,7,8,Aucune,Bien toléré
+Pamplemousse,Fruits,Nov-Mars,Vitamine C + détox,Bénéfique,6,8,7,5,Lutéale,Acidité + interactions
+Citron,Fruits,Toute l'année,Vitamine C + détox,Bénéfique,7,8,7,6,Aucune,Acidité dentaire
+Mangue,Fruits,Avr-Juin,Vitamine C + bêtacarotène,Bénéfique,7,8,8,7,Aucune,Sucre
+Ananas,Fruits,Oct-Avr,Broméline + vitamine C,Bénéfique,8,8,8,6,Lutéale,Acidité
+Papaye,Fruits,Oct-Déc,Papaïne + vitamine C,Bénéfique,7,8,8,7,Aucune,Bien toléré
+Dattes,Fruits,Oct-Déc,Fer + magnésium + énergie,Bénéfique,9,7,6,9,Aucune,Sucre élevé
+Figue,Fruits,Août-Oct,Fer + calcium + fibres,Bénéfique,9,7,6,8,Aucune,Sucre
+Abricot sec,Fruits,Toute l'année,Fer + bêtacarotène,Bénéfique,9,7,7,8,Aucune,Sucre concentré
+Pruneau,Fruits,Toute l'année,Fibres + fer + transit,Bénéfique,8,7,6,9,Aucune,Effet laxatif
+Hareng,Protéines animales,Toute l'année,Oméga-3 + vitamine D,Bénéfique,9,8,8,8,Aucune,Bien toléré
+Truite,Protéines animales,Toute l'année,Oméga-3 + protéines,Bénéfique,9,8,8,8,Aucune,Bien toléré
+Cabillaud,Protéines animales,Toute l'année,Protéines maigres + iode,Bénéfique,7,8,8,7,Aucune,Bien toléré
+Lapin,Protéines animales,Toute l'année,Protéines maigres + B12,Bénéfique,7,8,8,7,Aucune,Bien toléré
+Veau,Protéines animales,Toute l'année,Fer + zinc + B12,Bénéfique,9,7,7,7,Aucune,Bien toléré
+Agneau,Protéines animales,Toute l'année,Fer héminique + zinc,Bénéfique,9,7,6,7,Folliculaire/Ovulatoire,Pro-inflammatoire
+Charcuterie,Protéines animales,Toute l'année,Protéines + sodium élevé,Néfaste,3,3,3,3,Toutes,Nitrites + inflammation
+Huîtres,Protéines animales,Sept-Avr,Zinc + fer + B12,Bénéfique,10,8,8,8,Aucune,Bien toléré
+Bar (loup),Protéines animales,Toute l'année,Protéines + oméga-3,Bénéfique,8,8,8,7,Aucune,Bien toléré
+Lait de vache,Produits laitiers & alternatives,Toute l'année,Calcium + protéines,Neutre,5,6,5,6,Menstruation,Pro-inflammatoire si excès
+Lait d'avoine,Produits laitiers & alternatives,Toute l'année,Glucides lents + fibres,Bénéfique,7,7,7,8,Aucune,Bien toléré
+Skyr,Produits laitiers & alternatives,Toute l'année,Protéines élevées + calcium,Bénéfique,8,9,8,8,Aucune,Bien toléré
+Mozzarella,Produits laitiers & alternatives,Toute l'année,Calcium + protéines,Neutre,6,7,6,7,Aucune,Modération conseillée
+Ricotta,Produits laitiers & alternatives,Toute l'année,Protéines légères,Bénéfique,7,8,7,8,Aucune,Bien toléré
+Noix du Brésil,Oléagineux & graines,Avr-Juin,Sélénium + magnésium,Bénéfique,8,8,8,8,Aucune,Modération (sélénium)
+Noix de pécan,Oléagineux & graines,Sept-Nov,Magnésium + antioxydants,Bénéfique,7,8,7,8,Aucune,Bien toléré
+Pistaches,Oléagineux & graines,Sept-Oct,Protéines + B6,Bénéfique,8,8,8,8,Aucune,Bien toléré
+Beurre de cacahuète,Oléagineux & graines,Toute l'année,Protéines + magnésium,Bénéfique,7,8,7,8,Aucune,Calories
+Safran,Épices,Toute l'année,Antidépresseur + SPM,Bénéfique,9,8,8,9,Aucune,Modération (cher)
+Poivre noir,Épices,Toute l'année,Pipérine + absorption,Bénéfique,7,8,7,7,Aucune,Bien toléré
+Clou de girofle,Épices,Toute l'année,Antibactérien + antidouleur,Bénéfique,8,7,7,8,Aucune,Modération
+Basilic,Épices,Mai-Sept,Adaptogène + magnésium,Bénéfique,7,8,7,8,Aucune,Bien toléré
+Menthe,Épices,Toute l'année,Digestion + apaisant,Bénéfique,8,7,7,8,Aucune,Reflux possible
+Romarin,Épices,Toute l'année,Antioxydant + circulation,Bénéfique,7,8,7,7,Aucune,Bien toléré
+Thym,Épices,Toute l'année,Antibactérien + fer,Bénéfique,8,7,7,7,Aucune,Bien toléré
+Origan,Épices,Toute l'année,Antioxydant + antibactérien,Bénéfique,7,7,7,7,Aucune,Bien toléré
+Eau,Boissons,Toute l'année,Hydratation essentielle,Bénéfique,10,10,10,10,Aucune,Indispensable
+Tisane camomille,Boissons,Toute l'année,Apaisante + anti-crampes,Bénéfique,9,7,7,9,Aucune,Bien toléré
+Tisane mélisse,Boissons,Toute l'année,Calmante + digestion,Bénéfique,8,7,7,9,Aucune,Bien toléré
+Tisane sauge,Boissons,Toute l'année,Hormones + bouffées,Bénéfique,6,7,7,8,Menstruation,Réduit flux
+Jus de citron,Boissons,Toute l'année,Vitamine C + détox,Bénéfique,7,8,7,6,Aucune,Acidité dentaire
+Sodas,Boissons,Toute l'année,Sucre + acidité,Néfaste,1,2,2,1,Toutes,Pic glycémique + inflammation
+Jus de fruits industriels,Boissons,Toute l'année,Sucre concentré,Néfaste,2,3,3,2,Toutes,Pic glycémique
+Chocolat noir 70%+,Douceurs,Toute l'année,Magnésium + antioxydants,Bénéfique,9,7,7,9,Aucune,Modération
+Chocolat au lait,Douceurs,Toute l'année,Sucre + calcium,Neutre,5,5,5,7,Lutéale,Sucre élevé
+Miel,Douceurs,Toute l'année,Antibactérien + énergie,Bénéfique,7,7,7,7,Aucune,Sucre
+Sirop d'érable,Douceurs,Toute l'année,Minéraux + sucre naturel,Neutre,6,6,6,7,Lutéale,Sucre
+Huile d'olive,Huiles & graisses,Toute l'année,Oméga-9 + antioxydants,Bénéfique,9,9,9,9,Aucune,Bien toléré
+Huile de colza,Huiles & graisses,Toute l'année,Oméga-3 végétal,Bénéfique,8,8,8,8,Aucune,Bien toléré
+Huile de noix,Huiles & graisses,Toute l'année,Oméga-3 végétal,Bénéfique,8,8,8,8,Aucune,Bien toléré
+Huile de lin,Huiles & graisses,Toute l'année,Oméga-3 + lignanes,Bénéfique,9,8,8,8,Aucune,Sensible à la chaleur
+Huile de coco,Huiles & graisses,Nov-Fév,Graisses saturées,Neutre,6,6,6,7,Folliculaire,Saturées en excès
+Beurre,Huiles & graisses,Toute l'année,Vitamine A + saturées,Neutre,6,6,6,7,Aucune,Modération
+Margarine,Huiles & graisses,Toute l'année,Acides gras transformés,Néfaste,3,3,3,3,Toutes,Acides gras trans

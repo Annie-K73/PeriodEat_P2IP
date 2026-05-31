@@ -59,12 +59,11 @@ class Plat:
             JOIN Composer c ON p.id_plat = c.id_plat
             JOIN Ingredient i ON c.id_ingredient = i.id_ingredient
         """)
-        plats_avec_ingredients = cur.fetchall()
+
         conn.close()
 
         # On récupère les plats dont tous les ingrédients sont de saison
         plats_de_saison = []
-        plats_vus = set()
 
         tous_plats = Plat.get_tous()
         for plat in tous_plats:

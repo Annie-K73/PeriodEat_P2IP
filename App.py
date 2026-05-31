@@ -33,6 +33,8 @@ if "connecte" not in st.session_state:
     st.session_state.connecte = False
 if "utilisateur" not in st.session_state:
     st.session_state.utilisateur = None
+if "admin_auth" not in st.session_state:
+    st.session_state.admin_auth = False
 
 if st.session_state.connecte:
     Anamnese.calculer_phase(st.session_state.utilisateur[0])
@@ -58,6 +60,7 @@ else:
     st.sidebar.divider()
     if st.sidebar.button("Se déconnecter"):
         st.session_state.connecte = False
+        st.session_state.admin_auth = False
         st.session_state.utilisateur = None
         st.rerun()
 

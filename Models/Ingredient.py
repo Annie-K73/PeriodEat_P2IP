@@ -6,7 +6,7 @@ class Ingredient:
                  scoreFolliculaire, scoreOvulation, scoreLuteale):
         self.nom = nom
         self.estSaisonnier = estSaisonnier
-        self.saison = saison  # 'printemps','ete','automne','hiver','toute saison'
+        self.saison = saison  
         self.scoreMenstruelle = scoreMenstruelle
         self.scoreFolliculaire = scoreFolliculaire
         self.scoreOvulation = scoreOvulation
@@ -60,7 +60,7 @@ class Ingredient:
     @staticmethod
     def synchroniser_csv():
         """Synchronise les ingrédients depuis le CSV sans vider toute la BDD."""
-        df = pd.read_csv("aliments_cycle.csv")
+        df = pd.read_csv("aliments_PeriodEat.csv")
 
         conn = get_connection()
         cur = conn.cursor()
