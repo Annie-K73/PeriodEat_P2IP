@@ -1,5 +1,6 @@
 periodeat.db
 __pycache__/
 .env
-.stream/
+.streamlit/
 
+periodeat copy.db
